@@ -20,3 +20,205 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+#mentors-tab .grid {
+  grid-template-columns: 1fr !important;
+  gap: 1rem !important;
+}
+
+.text-purple-400{
+  color: white;
+}
+/* Mobile responsive styles for 720px width */
+@media screen and (max-width: 720px) {
+  /* Icon size adjustments */
+  #tabs-section .grid {
+    grid-template-columns: repeat(6, auto) !important;
+    gap: 0.5rem !important;
+    overflow-x: none !important;
+    white-space: nowrap !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important; /* Firefox */
+    padding-bottom: 0.5rem !important;
+  }
+
+  /* Hide scrollbar */
+  #tabs-section .grid::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  /* Tab buttons */
+  #tabs-section .grid button {
+    min-width: max-content !important;
+    padding: 0.5rem 1rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+  }
+
+  /* Icon size adjustments */
+  .w-6, .h-6 {
+    width: 1.3rem !important;
+    height: 1.3rem !important;
+    color: white !important;
+    margin-right: 0rem !important;
+  }
+  .text-sm.font-medium.mt-2 {
+    display: none; /* Hide the text on mobile view */
+  }
+  /* Reduce padding around icons in buttons */
+  button {
+    padding: 0.5rem 0.75rem !important;
+  }
+  /* Hero Section */
+  #hero {
+    padding: 1rem;
+    min-height: calc(100vh - 64px);
+  }
+
+  #hero h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  #hero p {
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+
+  /* Countdown Timer */
+  .countdown-timer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .countdown-timer > div {
+    padding: 0.75rem;
+  }
+
+  .countdown-timer .text-4xl {
+    font-size: 1.875rem;
+  }
+
+  /* Navigation */
+  nav .max-w-7xl {
+    padding: 0 1rem;
+  }
+
+  /* Tab Section */
+  #tabs-section {
+    padding: 1rem;
+  }
+
+  #tabs-section .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  #tabs-section .p-6 {
+    padding: 1rem;
+  }
+
+  /* Cards */
+  .card {
+    padding: 1rem;
+  }
+
+  /* Prizes Section */
+  #prizes-tab .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Mentors Section */
+  #mentors-tab .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Buttons */
+  button.px-8 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  button.py-4 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  /* Text Adjustments */
+  .text-4xl {
+    font-size: 2rem;
+  }
+
+  .text-2xl {
+    font-size: 1.5rem;
+  }
+
+  .text-xl {
+    font-size: 1.25rem;
+  }
+
+  /* Layout Adjustments */
+  .space-y-8 {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .space-y-4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 1.5rem 1rem;
+  }
+
+  /* Mobile Menu */
+  .mobile-menu {
+    width: 100%;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    background-color: rgba(17, 24, 39, 0.95);
+  }
+
+  .mobile-menu button {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+  }
+}
+
+/* Additional helper classes for better mobile experience */
+@media screen and (max-width: 720px) {
+  .mobile-full-width {
+    width: 100% !important;
+  }
+
+  .mobile-text-center {
+    text-align: center !important;
+  }
+
+  .mobile-stack {
+    flex-direction: column !important;
+  }
+
+  .mobile-hidden {
+    display: none !important;
+  }
+
+  .mobile-block {
+    display: block !important;
+  }
+
+  .mobile-p-4 {
+    padding: 1rem !important;
+  }
+
+  .mobile-m-2 {
+    margin: 0.5rem !important;
+  }
+}

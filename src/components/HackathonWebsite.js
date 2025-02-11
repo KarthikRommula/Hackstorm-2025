@@ -1,5 +1,5 @@
 'use client'
-import React, {  useRef,useState, useEffect } from 'react';
+import React, { useRef,useState, useEffect } from 'react';
 import { Clock, Trophy, Book, Users, Calendar, HelpCircle, MapPin, MessageSquare, Code } from 'lucide-react';
 
 const REGISTRATION_END_DATE = '2025-03-01T00:00:00'; // Set your fixed end date here
@@ -156,24 +156,26 @@ const tabs = {
         icon: <Users className="w-6 h-6" />,
         title: "Mentors",
         content: (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Card>
-                    <h4 className="font-bold text-xl mb-2">Technical Mentors</h4>
-                    <ul className="list-disc list-inside space-y-2">
-                        <li>Senior Engineers from FAANG companies</li>
-                        <li>Cloud Architecture Experts</li>
-                        <li>UI/UX Design Specialists</li>
-                    </ul>
-                </Card>
-                <Card>
-                    <h4 className="font-bold text-xl mb-2">Business Mentors</h4>
-                    <ul className="list-disc list-inside space-y-2">
-                        <li>Startup Founders</li>
-                        <li>Product Managers</li>
-                        <li>VC Partners</li>
-                    </ul>
-                </Card>
-            </div>
+            <div className="space-y-4">
+                
+            <Card>
+                <h4 className="font-bold text-xl mb-2">Technical Mentors</h4>
+                <ul className="list-disc list-inside space-y-2">
+                    <li>Senior Engineers from FAANG companies</li>
+                    <li>Cloud Architecture Experts</li>
+                    <li>UI/UX Design Specialists</li>
+                </ul>
+            </Card>
+            <Card>
+                <h4 className="font-bold text-xl mb-2">Business Mentors</h4>
+                <ul className="list-disc list-inside space-y-2">
+                    <li>Startup Founders</li>
+                    <li>Product Managers</li>
+                    <li>VC Partners</li>
+                </ul>
+            </Card>
+        </div>
+        
         )
     },
     faq: {
@@ -211,7 +213,7 @@ const HackathonWebsite = () => {
     const tabsRef = useRef(null);
 
     const scrollToTabs = () => {
-        tabsRef.current?.scrollIntoView({ 
+        tabsRef.current?.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
         });
@@ -274,7 +276,7 @@ const HackathonWebsite = () => {
                     </div>
                 </div>
                 {mobileMenuOpen && (
-                    <div 
+                    <div
                         className="md:hidden bg-gray-900/95 border-t border-white/10 shadow-lg backdrop-blur-sm"
                         role="dialog"
                         aria-label="Mobile menu"
@@ -314,13 +316,13 @@ const HackathonWebsite = () => {
                         </div>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                            <button 
+                            <button
                                 onClick={scrollToTabs}
                                 className="px-8 py-4 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold transition-all transform hover:scale-105"
                             >
                                 Register Now
                             </button>
-                            <button 
+                            <button
                                 onClick={scrollToTabs}
                                 className="px-8 py-4 rounded-lg border border-white/20 hover:bg-gray-800/50 transition-all"
                             >
@@ -331,13 +333,13 @@ const HackathonWebsite = () => {
                 </section>
 
                 {/* Tabs Section */}
-                <section 
+                <section
                     ref={tabsRef}
-                    id="tabs-section" 
+                    id="tabs-section"
                     className="max-w-7xl mx-auto px-4 py-16 scroll-mt-20"
                 >
                     <div className="bg-gray-900/50 rounded-2xl shadow-xl border border-white/10 p-6">
-                        <div 
+                        <div
                             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8"
                             role="tablist"
                             aria-label="Hackathon information"
@@ -349,18 +351,17 @@ const HackathonWebsite = () => {
                                     aria-selected={activeTab === key}
                                     aria-controls={`${key}-tab`}
                                     onClick={() => setActiveTab(key)}
-                                    className={`flex flex-col items-center p-4 rounded-lg transition-all ${
-                                        activeTab === key
+                                    className={`flex flex-col items-center p-4 rounded-lg transition-all ${activeTab === key
                                             ? "bg-purple-500/20 text-purple-400"
                                             : "hover:bg-gray-800/50"
-                                    }`}
+                                        }`}
                                 >
                                     {value.icon}
                                     <span className="text-sm font-medium mt-2">{value.title}</span>
                                 </button>
                             ))}
                         </div>
-                        <div 
+                        <div
                             id={`${activeTab}-tab`}
                             role="tabpanel"
                             className="p-4"
