@@ -1,7 +1,4 @@
-export default {
-    reactStrictMode: true,
-    experimental: {
-      scrollRestoration: true,
-    },
-  };
-  
+/** @type {import('next').NextConfig} */
+const nextConfig = {};
+
+export default nextConfig;
