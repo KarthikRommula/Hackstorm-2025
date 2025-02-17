@@ -7,6 +7,15 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': {'max': '412px'},  // Custom breakpoint for screens below 412px
+      },
+      width: {
+      '40': '140px',
+      },
+      height: {
+        '40': '64px',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

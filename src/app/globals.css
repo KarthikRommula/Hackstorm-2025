@@ -30,6 +30,7 @@ body {
 }
 /* Mobile responsive styles for 720px width */
 @media screen and (max-width: 720px) {
+  
   /* Icon size adjustments */
   #tabs-section .grid {
     grid-template-columns: repeat(6, auto) !important;
@@ -194,6 +195,13 @@ body {
 
 /* Additional helper classes for better mobile experience */
 @media screen and (max-width: 720px) {
+  .college-logo {
+    height: 50px;  /* Adjust height for mobile */
+  }
+
+  .ai-logo {
+    height: 50px;  /* Adjust height for mobile */
+  }
   .mobile-full-width {
     width: 100% !important;
   }
