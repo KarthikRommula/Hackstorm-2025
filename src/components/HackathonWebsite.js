@@ -551,7 +551,7 @@ const HackathonWebsite = () => {
                         </div>
 
                         {/* Active Tab Content */}
-                        <div className="mt-6 w-full p-4 sm:p-8 rounded-2xl shadow-lg text-gray-200">
+                        <div className="mt-6 w-full p-4 sm:p-8 rounded-2xl  text-gray-200">
                             {allTabs[activeTab].content}
                         </div>
                     </div>
