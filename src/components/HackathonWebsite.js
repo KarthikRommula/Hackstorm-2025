@@ -1,8 +1,11 @@
 'use client'
-import React, { useRef,useState, useEffect } from 'react';
-import { Clock, Trophy, Book, Users, Calendar, HelpCircle, MapPin, MessageSquare, Code } from 'lucide-react';
+import React, { useRef, useState, useEffect } from 'react';
+import {
+    Clock, Trophy, ClipboardList,
+    Book, Users, Calendar, HelpCircle, MapPin, MessageSquare, Code
+} from 'lucide-react';
 
-const REGISTRATION_END_DATE = '2025-03-01T00:00:00'; // Set your fixed end date here
+const REGISTRATION_END_DATE = '2025-02-26T00:00:00'; // Set your fixed end date here
 
 // Reusable components
 const Card = ({ children, className = "" }) => (
@@ -90,16 +93,13 @@ const tabs = {
         content: (
             <div className="space-y-4">
                 <Card>
-                    <h4 className="font-bold text-xl mb-2">🏆 First Place - $5,000</h4>
-                    <p>Plus latest MacBook Pro and mentorship opportunity</p>
+                    <h4 className="font-bold text-xl mb-2">🏆 First Place - ₹2,000</h4>
                 </Card>
                 <Card>
-                    <h4 className="font-bold text-xl mb-2">🥈 Second Place - $3,000</h4>
-                    <p>Plus latest iPad Pro and development subscription</p>
+                    <h4 className="font-bold text-xl mb-2">🥈 Second Place - ₹1,500</h4>
                 </Card>
                 <Card>
-                    <h4 className="font-bold text-xl mb-2">🥉 Third Place - $2,000</h4>
-                    <p>Plus latest AirPods Pro and cloud credits</p>
+                    <h4 className="font-bold text-xl mb-2">🥉 Third Place - ₹1,000</h4>
                 </Card>
             </div>
         )
@@ -110,20 +110,73 @@ const tabs = {
         content: (
             <div className="space-y-4">
                 <Card>
-                    <h4 className="font-bold text-xl mb-2">Team Formation</h4>
+                    <h4 className="font-bold text-xl mb-2">Team Formation & Participation</h4>
                     <ul className="list-disc list-inside space-y-2">
                         <li>Teams must consist of 2-4 members</li>
-                        <li>Cross-functional teams are encouraged</li>
-                        <li>Solo participants will be helped to find team members</li>
+                        <li>Each team (Team Leader) must register all members before the hackathon begin</li>
+                        <li>Teams must work only during the designated 24-hour period</li>
+                        <li>All code must be written during the hackathon; no pre-written code allowed</li>
+                        <li>Use of open-source libraries and APIs is permitted if properly credited</li>
                     </ul>
                 </Card>
                 <Card>
-                    <h4 className="font-bold text-xl mb-2">Code & Development</h4>
+                    <h4 className="font-bold text-xl mb-2">Project Requirements</h4>
                     <ul className="list-disc list-inside space-y-2">
-                        <li>All code must be written during the hackathon</li>
-                        <li>Use of open-source libraries is allowed</li>
-                        <li>Code must be submitted to GitHub</li>
+                        <li>Teams must choose one problem statement from the provided categories</li>
+                        <li>Solutions must be original and not previously published</li>
+                        <li>Working prototype/MVP must be demonstrated at the end</li>
+                        <li>Source code must be submitted to a public GitHub repository</li>
+                        <li>Each team must prepare a 10-minute presentation
+                        </li>
                     </ul>
+                </Card>
+                <Card>
+                    <h4 className="font-bold text-xl mb-2">Technical Guidelines</h4>
+                    <ul className="list-disc list-inside space-y-2">
+                        <li>Teams must document their tech stack and architecture</li>
+                        <li>All APIs/external services used must be documented</li>
+                        <li>Code must be appropriately commented</li>
+                    </ul>
+                </Card>
+                <Card>
+                    <h4 className="font-bold text-xl mb-2">Time Bonuses & Special Considerations </h4>
+                    <ul className="list-disc list-inside space-y-2">
+                        <li>1.	Early Submission (up to 2 bonus points)</li>
+                        <li>2.	Regular Commits Throughout the 24 Hours (up to 2 bonus points)</li>
+                    </ul>
+                </Card>
+                <Card>
+                    <h4 className="font-bold text-xl mb-2">Disqualification Criteria</h4>
+                    <ul className="list-disc list-inside space-y-2">
+                        <li>Use of pre-written code.</li>
+                        <li> Plagiarism or copyright violation.</li>
+                        <li> Missing core problem requirements.</li>
+                        <li>Late submissions (past 24-hour mark).</li>
+                        <li>Inappropriate content or ethical violations.</li>
+                    </ul>
+                </Card>
+            </div>
+        )
+    },
+    Tracks: {
+        icon: <ClipboardList className="w-6 h-6" /> ,
+        title: "TRACKS",
+        content: (
+            <div className="space-y-4">
+                <Card>
+                    <h4 className="font-bold text-xl mb-2">1. AI AUTOMATION</h4>
+                </Card>
+                <Card>
+                    <h4 className="font-bold text-xl mb-2">2. MEDICAL</h4>
+                </Card>
+                <Card>
+                    <h4 className="font-bold text-xl mb-2">3. FINANCE</h4>
+                </Card>
+                <Card>
+                    <h4 className="font-bold text-xl mb-2">4. SOCIAL MEDIA & COMMUNICATION</h4>
+                </Card>
+                <Card>
+                    <h4 className="font-bold text-xl mb-2">5. Exciting TRACK Coming Soon!</h4>
                 </Card>
             </div>
         )
@@ -134,19 +187,20 @@ const tabs = {
         content: (
             <div className="space-y-4">
                 <Card>
-                    <h4 className="font-bold text-xl mb-2">Day 1</h4>
+                    <h4 className="font-bold text-xl mb-2">28<sup>th </sup>
+                        FEBRUARY 2025 - Day 1</h4>
                     <ul className="list-disc list-inside space-y-2">
-                        <li>9:00 AM - Opening Ceremony</li>
-                        <li>10:00 AM - Hacking Begins</li>
-                        <li>2:00 PM - Workshop Sessions</li>
+                        <li>10:00 AM - Opening Ceremony</li>
+                        <li>1:00 PM - Hacking Begins</li>
                     </ul>
                 </Card>
                 <Card>
-                    <h4 className="font-bold text-xl mb-2">Day 2</h4>
+                    <h4 className="font-bold text-xl mb-2" >1<sup>st  </sup>
+                        MARCH 2025 - Day 2</h4>
                     <ul className="list-disc list-inside space-y-2">
                         <li>9:00 AM - Project Check-in</li>
-                        <li>3:00 PM - Final Submissions</li>
-                        <li>6:00 PM - Awards Ceremony</li>
+                        <li>10:00 AM - Final Submissions</li>
+                        <li>2:00 PM - Awards Ceremony</li>
                     </ul>
                 </Card>
             </div>
@@ -157,25 +211,25 @@ const tabs = {
         title: "Mentors",
         content: (
             <div className="space-y-4">
-                
-            <Card>
-                <h4 className="font-bold text-xl mb-2">Technical Mentors</h4>
-                <ul className="list-disc list-inside space-y-2">
-                    <li>Senior Engineers from FAANG companies</li>
-                    <li>Cloud Architecture Experts</li>
-                    <li>UI/UX Design Specialists</li>
-                </ul>
-            </Card>
-            <Card>
-                <h4 className="font-bold text-xl mb-2">Business Mentors</h4>
-                <ul className="list-disc list-inside space-y-2">
-                    <li>Startup Founders</li>
-                    <li>Product Managers</li>
-                    <li>VC Partners</li>
-                </ul>
-            </Card>
-        </div>
-        
+
+                <Card>
+                    <h4 className="font-bold text-xl mb-2">Technical Mentors</h4>
+                    <ul className="list-disc list-inside space-y-2">
+                        <li>Senior Engineers from FAANG companies</li>
+                        <li>Cloud Architecture Experts</li>
+                        <li>UI/UX Design Specialists</li>
+                    </ul>
+                </Card>
+                <Card>
+                    <h4 className="font-bold text-xl mb-2">Business Mentors</h4>
+                    <ul className="list-disc list-inside space-y-2">
+                        <li>Startup Founders</li>
+                        <li>Product Managers</li>
+                        <li>VC Partners</li>
+                    </ul>
+                </Card>
+            </div>
+
         )
     },
     faq: {
@@ -190,12 +244,20 @@ const tabs = {
                     },
                     {
                         q: "What should I bring?",
-                        a: "Bring your laptop, charger, and any other devices you need. We'll provide food, drinks, and a comfortable workspace."
+                        a: "Bring your laptop, charger, and any other devices you need. We'll provide food (DAY 1 : DINNER & DAY 2 : BREAKFAST), drinks, and a comfortable workspace."
                     },
                     {
                         q: "Is there a participation fee?",
-                        a: "No, participation is completely free! We want to make this event accessible to everyone."
-                    }
+                        a: "The participation fee is ₹300 per person. We aim to make the event affordable and accessible to everyone."
+                    },
+                    {
+                        q: "Early Submission (up to 2 bonus points)?",
+                        a: "If a team submits their project before the deadline, they can earn up to 2 extra points.The earlier they submit, the higher the chance of getting full bonus points."
+                    },
+                    {
+                        q: "Regular Commits Throughout the 24 Hours (up to 2 bonus points)?",
+                        a: "Consistently push updates to their code repository (e.g., GitHub, GitLab) instead of waiting until the last minute. Frequent commits (e.g., after each feature) can earn up to 2 extra points."
+                    },
                 ].map((item, index) => (
                     <Card key={index}>
                         <h4 className="font-bold text-lg mb-2">{item.q}</h4>
@@ -244,17 +306,17 @@ const HackathonWebsite = () => {
             </div>
 
             <nav className="fixed w-full z-50 bg-gray-900/80 border-b border-white/10 shadow-lg backdrop-blur-sm">
-                <div className="max-w-7xl mx-auto px-4">
-                    <div className="flex justify-between h-16">
+                <div className="max-w-7xl mx-auto px-4" style={{ height: '80px' }}>
+                    {/* Flex container for navbar items */}
+                    <div className="flex justify-between items-center h-16">
+                        {/* Left: College Logo */}
                         <div className="flex items-center">
                             <a href="#" className="flex items-center space-x-2">
-                                <Code className="w-8 h-8 text-purple-500" />
-                                <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text">
-                                    Hack24
-                                </span>
+                                <img src="/images/CLG LOGO.jpg" alt="College Logo" style={{ width: '220px', height: '75px', marginTop: '15px' }} />
                             </a>
                         </div>
-                        <div className="hidden md:flex items-center space-x-8">
+
+                        <div className="hidden md:flex items-center space-x-8" style={{ marginTop: '15px' }}>
                             {Object.entries(tabs).map(([key, value]) => (
                                 <TabButton
                                     key={key}
@@ -265,6 +327,11 @@ const HackathonWebsite = () => {
                                 />
                             ))}
                         </div>
+                        <div className="flex items-center">
+                            <a href="#" className="flex items-center space-x-2">
+                                <img src="/images/AI LOGO.jpg" alt="AI CLUB Logo" style={{ width: '220px', height: '75px', marginTop: '15px' }} />
+                            </a>
+                        </div>
                         <button
                             className="md:hidden text-white p-2"
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -274,6 +341,7 @@ const HackathonWebsite = () => {
                             ☰
                         </button>
                     </div>
+
                 </div>
                 {mobileMenuOpen && (
                     <div
@@ -302,11 +370,11 @@ const HackathonWebsite = () => {
                         <div className="space-y-4">
                             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">
                                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text">
-                                    24HR Hackathon
+                                    HackStorm 2025
                                 </span>
                             </h1>
                             <p className="text-xl md:text-2xl text-gray-300">
-                                Join us for an exciting 24-hour journey of innovation, collaboration, and creation.
+                                The Ultimate 24-Hour Hackathon
                             </p>
                         </div>
 
@@ -326,7 +394,7 @@ const HackathonWebsite = () => {
                                 onClick={scrollToTabs}
                                 className="px-8 py-4 rounded-lg border border-white/20 hover:bg-gray-800/50 transition-all"
                             >
-                                Learn More
+                                Learn more
                             </button>
                         </div>
                     </div>
@@ -352,8 +420,8 @@ const HackathonWebsite = () => {
                                     aria-controls={`${key}-tab`}
                                     onClick={() => setActiveTab(key)}
                                     className={`flex flex-col items-center p-4 rounded-lg transition-all ${activeTab === key
-                                            ? "bg-purple-500/20 text-purple-400"
-                                            : "hover:bg-gray-800/50"
+                                        ? "bg-purple-500/20 text-purple-400"
+                                        : "hover:bg-gray-800/50"
                                         }`}
                                 >
                                     {value.icon}
@@ -374,7 +442,7 @@ const HackathonWebsite = () => {
 
             <footer className="relative z-10 bg-gray-900/80 border-t border-white/10 py-8">
                 <div className="max-w-7xl mx-auto px-4 text-center text-gray-400">
-                    <p>© {new Date().getFullYear()} Hack24. All rights reserved.</p>
+                    <p>© {new Date().getFullYear()} Hack Storm-2025. All rights reserved.</p>
                 </div>
             </footer>
         </div>
