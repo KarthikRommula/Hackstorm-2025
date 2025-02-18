@@ -61,7 +61,7 @@ body {
   .w-6, .h-6 {
     width: 1.3rem !important;
     height: 1.3rem !important;
-    color: white !important;
+   
     margin-right: 0rem !important;
   }
   .text-sm.font-medium.mt-2 {
@@ -229,4 +229,18 @@ body {
   .mobile-m-2 {
     margin: 0.5rem !important;
   }
+}
+body {
+  user-select: none; /* Prevent text selection */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+body, html {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+img {
+  pointer-events: none; /* Prevent image dragging */
 }

@@ -2,9 +2,35 @@
 import React, { useRef, useState, useEffect } from 'react';
 import {
     Clock, Trophy, ClipboardList, Mail,
-    Book, Users, Calendar, HelpCircle
+    Book, Users, Calendar, HelpCircle, MapPin, Award, Medal, Star
 } from 'lucide-react';
 
+function App() {
+    useEffect(() => {
+        // Create meta tag
+        const metaTag = document.createElement("meta");
+        metaTag.name = "viewport";
+        metaTag.content = "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no";
+
+        // Append to head
+        document.head.appendChild(metaTag);
+
+        // Cleanup on unmount
+        return () => {
+            document.head.removeChild(metaTag);
+        };
+    }, []);
+
+    return (
+        <div className="App">
+            <h1>Welcome to My React App</h1>
+            <p>Try zooming or right-clicking! 🚫</p>
+        </div>
+    );
+}
+
+export { App };
+// Constants
 const REGISTRATION_END_DATE = '2025-03-06T00:00:00';
 
 // Reusable components
@@ -78,19 +104,70 @@ const tabCategories = {
                 icon: <Trophy className="w-5 h-5" />,
                 title: "Prizes",
                 content: (
-                    <div className="space-y-4">
-                        <Card>
-                            <h4 className="font-bold text-xl mb-2">🏆 First Place - ₹2,000</h4>
+                    <div className="max-w-4xl mx-auto space-y-8">
+                    {/* Header */}
+                    <div className="text-center space-y-2">
+                        <h2 className="text-4xl font-bold text-blue-600">PRIZE POOL</h2>
+                        <div className="inline-block bg-blue-50 rounded-full px-6 py-2">
+                            <h3 className="text-4xl font-extrabold text-blue-700">
+                                ₹5,000
+                            </h3>
+                        </div>
+                    </div>
+
+                    {/* Prize Cards Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {/* First Place */}
+                        <Card className="p-6 text-center space-y-4 transform hover:scale-105 transition-transform duration-200">
+                        <Trophy className="w-12 h-12 mx-auto text-[#FFD700]" />
+
+                            <div>
+                                <h4 className="font-bold text-2xl text-[#FFD700]">First Place</h4>
+                                <p className="text-3xl font-extrabold text-500">₹2,000</p>
+                            </div>
                         </Card>
-                        <Card>
-                            <h4 className="font-bold text-xl mb-2">🥈 Second Place - ₹1,500</h4>
+
+                        {/* Second Place */}
+                        <Card className="p-6 text-center space-y-4 transform hover:scale-105 transition-transform duration-200">
+                            <Award className="w-12 h-12 mx-auto text-gray-400" />
+                            <div>
+                                <h4 className="font-bold text-2xl text-gray-400">Second Place</h4>
+                                <p className="text-3xl font-extrabold text-silver-500">₹1,500</p>
+                            </div>
                         </Card>
-                        <Card>
-                            <h4 className="font-bold text-xl mb-2">🥉 Third Place - ₹1,000</h4>
+
+                        {/* Third Place */}
+                        <Card className="p-6 text-center space-y-4 transform hover:scale-105 transition-transform duration-200">
+                            <Medal className="w-12 h-12 mx-auto text-[#CD7F32]" />
+                            <div>
+                                <h4 className="font-bold text-2xl text-[#CD7F32]">Third Place</h4>
+                                <p className="text-3xl font-extrabold text-600">₹1,000</p>
+                            </div>
                         </Card>
                     </div>
+
+                    {/* Additional Rewards Card */}
+                    <Card className="p-6 bg-trasnparent ">
+                        <h4 className="font-bold text-2xl mb-4 text-blue-600">Additional Rewards</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                               <div className="flex items-center space-x-3">
+                                <Trophy className="w-6 h-6 text-[#FFD700]" />
+                                <p className="text-700">MVP Trophy</p>
+                            </div>
+                            <div className="flex items-center space-x-3">
+                                <Star className="w-6 h-6 text-white-600" />
+                                <p className="text-700">Merit Certificates for winners</p>
+                            </div>
+                            <div className="flex items-center space-x-3">
+                                <Star className="w-6 h-6 text-white-600" />
+                                <p className="text-700">Participation Certificates</p>
+                            </div>
+                        </div>
+                    </Card>
+                </div>
                 )
             },
+
             rules: {
                 icon: <Book className="w-5 h-5" />,
                 title: "Rules",
@@ -153,7 +230,7 @@ const tabCategories = {
                             <h4 className="font-bold text-xl mb-2">Day 1 - March 7th, 2025</h4>
                             <ul className="list-disc list-inside space-y-2">
                                 <li>10:00 AM - Opening Ceremony</li>
-                                <li>1:00 PM - Hacking Begins</li>
+                                <li>2:00 PM - Hacking Begins</li>
                             </ul>
                         </Card>
                         <Card>
@@ -186,7 +263,7 @@ const tabCategories = {
                         </Card>
                         <Card>
                             <h4 className="font-bold text-xl mb-2">4. Social MEDIA & COMMUNICATION</h4>
-                            <p>Address social challenges through technology</p>
+                            <p>Built Social  media & communication through technology</p>
                         </Card>
                         <Card>
                             <h4 className="font-bold text-xl mb-2">5. Exciting Theme Coming Soon!</h4>
@@ -196,7 +273,7 @@ const tabCategories = {
             },
             mentors: {
                 icon: <Users className="w-5 h-5" />,
-                title: "Mentors",
+                title: "Expert Committee",
                 content: (
                     <div className="space-y-4">
                         <Card>
@@ -232,24 +309,32 @@ const tabCategories = {
                             {
                                 q: "What should I bring?",
                                 a: <>Bring your laptop, charger, and any other devices you need.
-                                <br/> We'll provide food (DAY 1 : DINNER & DAY 2 : BREAKFAST), drinks, and a comfortable workspace.</>
+                                </>
                             },
                             {
                                 q: "Is there a participation fee?",
                                 a: "The participation fee is ₹400 per person. We aim to make the event affordable and accessible to everyone."
                             },
                             {
+                                q: "Food and refreshments will be available throughout the event?",
+                                a: <>
+                                    Food will be provided as follows:
+                                    <br />
+                                    Day 1: Dinner, snacks (Lays, biscuits, drinks, tea or coffee)<br />
+                                    Day 2: Breakfast, lunch, and snacks.</>
+                            },
+                            {
                                 q: "Early Submission (up to 2 bonus points)?",
                                 a: <>
-                                If a team submits their project before the deadline, they can earn up to 2 extra points.
-                                <br/>The earlier they submit, the higher the chance of getting full bonus points.</>
+                                    If a team submits their project before the deadline, they can earn up to 2 extra points.
+                                    <br />The earlier they submit, the higher the chance of getting full bonus points.</>
                             },
                             {
                                 q: "Regular Commits Throughout the 24 Hours (up to 2 bonus points)?",
                                 a: <>
-                                Consistently push updates to their code repository (e.g., GitHub, GitLab) instead of waiting until the last minute. 
-                                <br/>
-                                Frequent commits (e.g., after each feature) can earn up to 2 extra points.</>
+                                    Consistently push updates to their code repository (e.g., GitHub, GitLab) instead of waiting until the last minute.
+                                    <br />
+                                    Frequent commits (e.g., after each feature) can earn up to 2 extra points.</>
 
                             },
                         ].map((item, index) => (
@@ -263,34 +348,63 @@ const tabCategories = {
             },
             contact: {
                 icon: <Mail className="w-6 h-6" />,
-                title: "Contact",
+                title: "About",
                 content: (
                     <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
                         {/* Left Section - Contact Details */}
                         <div className="md:w-2/3 space-y-4">
                             {[
                                 {
-                                    q: "College Details",
-                                   a: <>
-                                    HACK STROM 2025 is hosted by KG REDDY COLLEGE OF ENGINEERING & TECHNOLOGY, located at Chilkur, Moinabad, Ranga Reddy, Telangana.
-                                    <br />
-                                    Our institution is committed to fostering innovation and technical excellence.
-                                </>
+                                    q: " About College",
+                                    a: <>
+                                        HACK STROM 2025 is hosted by KG REDDY COLLEGE OF ENGINEERING & TECHNOLOGY.
+                                        <br />Located at Chilkur, Moinabad, Ranga Reddy, Telangana.
+                                        <br />
+                                        Our institution is committed to fostering innovation and technical excellence.
+                                    </>
                                 },
                                 {
-                                    q: "College Administration",
+                                    q: "About Department",
                                     a: (
-                                        <div>
-                                            <ul className="list-disc pl-5 space-y-1">
-                                                <li><strong>Chairman:</strong> Mr. [Chairman Name]</li>
-                                                <li><strong>Director:</strong> Dr. [Director Name]</li>
-                                                <li><strong>Principal:</strong> Dr. [Principal Name]</li>
-                                                <li><strong>Vice Principal:</strong> Prof. [Vice Principal Name]</li>
-                                                <li><strong>HOD (CSE - AI&ML):</strong>Mr. Ram Babu</li>
-                                            </ul>
-                                        </div>
+                                        <>
+                                            <p>
+                                                B. Tech in Artificial Intelligence & Machine Learning is an undergraduate
+                                                programme with advanced learning solutions imparting knowledge of advanced
+                                                innovations like machine learning, often called deep learning, and artificial
+                                                intelligence.
+                                            </p>
+
+
+                                            <div style={{ display: "flex", alignItems: "center" }}>
+                                                <img
+                                                    src="/images/Principal.png"
+                                                    alt="Principal Image"
+                                                    width="150"
+                                                    height="150"
+                                                    style={{ borderRadius: "0%", marginRight: "15px", marginTop: "10px" }}
+                                                />
+                                                <div>
+                                                    <h4 className="font-bold">Dr. S. SAI SATYANARAYANA REDDY</h4>
+                                                    <p className="font-light">Principal</p>
+                                                </div>
+                                            </div>
+                                            <div style={{ display: "flex", alignItems: "center" }}>
+                                                <img
+                                                    src="/images/HOD.JPG"
+                                                    alt="Principal Image"
+                                                    width="150"
+                                                    height="150"
+                                                    style={{ borderRadius: "0%", marginRight: "15px", marginTop: "10px" }}
+                                                />
+                                                <div>
+                                                    <h4 className="font-bold">Prof. Rambabu Mudusu</h4>
+                                                    <p className="font-light">HoD Of CSE - AI&ML</p>
+                                                </div>
+                                            </div>
+                                        </>
                                     )
                                 },
+
                                 {
                                     q: "Club Coordinators",
                                     a: (
@@ -299,21 +413,43 @@ const tabCategories = {
                                                 <li><strong>B.AARTHIK</strong> - PRESIDENT</li>
                                                 <li><strong>R.KARTHIK</strong> - VICE PRESIDENT</li>
                                                 <li><strong>G.KARTHIK</strong> - SECRETARY</li>
+                                                <li><strong>AKSHITHA NAMAJI</strong> - HEAD OF OPERATIONS</li>
+                                                <li><strong>ABHAY KUMAR</strong> - HEAD OF DOCUMENTATION</li>
+                                                <li><strong>SAI TARUN REDDY</strong> - HEAD OF PUBLICITY</li>
+                                                <li><strong>BHAVYA SREE</strong> - HEAD OF SOCIAL MEDIA</li>
                                             </ul>
                                         </div>
                                     )
                                 },
                                 {
                                     q: "General Inquiries",
-                                    a: "For any queries, feel free to reach out to us at officialkarthik1819@gmail.com or call us at +91-7043692980."
+                                    a: <>
+                                        For any queries, feel free to reach out to us at <br />
+                                        <a href="mailto:officialkarthik1819@gmail.com" className="text-600">
+                                            officialkarthik1819@gmail.com
+                                        </a> or call us at
+                                        <a href="tel:+916301308494" className="text-600 ml-1">
+                                            +91-6301308494
+                                        </a>.
+                                        <br />
+                                        <a
+                                            href="https://maps.app.goo.gl/W6BMzjwvN4aVWu93A"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-2 mt-2 text-blue-600 font-medium hover:text-blue-800"
+                                        >
+                                            <MapPin className="w-5 h-5 text-white-600" />
+                                            View on Maps
+                                        </a>
+                                    </>
+
                                 },
                                 {
                                     q: "Follow Us",
                                     a: (
                                         <div className="flex space-x-4">
-                                            <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" className="text-blue-500">Twitter</a>
-                                            <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener noreferrer" className="text-blue-700">LinkedIn</a>
-                                            <a href="https://discord.gg/yourdiscord" target="_blank" rel="noopener noreferrer" className="text-purple-500">Discord</a>
+                                            <a href="https://www.instagram.com/aiclub_kgr/" target="_blank" rel="noopener noreferrer" className="text-pink-500">INSTAGRAM</a>
+                                            <a href="https://kgr.ac.in/" target="_blank" rel="noopener noreferrer" className="text-blue-500">KGRCET</a>
                                         </div>
                                     )
                                 }
@@ -432,7 +568,7 @@ const HackathonWebsite = () => {
                             <img
                                 src="/images/CLG LOGO.jpg"
                                 alt="College Logo"
-                                className="h-16 sm:h-12 md:h-14 lg:h-16 w-30 xs:w-40 object-contain"
+                                className="h-16 sm:h-12 md:h-14 lg:h-16 w-40 xs:w-40"
                             />
                         </div>
 
@@ -469,7 +605,7 @@ const HackathonWebsite = () => {
                             <img
                                 src="/images/AI LOGO.jpg"
                                 alt="AI Logo"
-                                className="h-16 sm:h-12 md:h-14 lg:h-16 w-30 xs:w-40 xs:h-40 "
+                                className="h-16 sm:h-12 md:h-14 lg:h-16 w-40 xs:w-40 xs:h-40"
                             />
                         </div>
                     </div>
