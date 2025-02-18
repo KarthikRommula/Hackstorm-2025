@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "HACK STROM - 2025",
+  title: "HACK STORM - 2025",
   description: "Created by R.KARTHIK",
 };
 
