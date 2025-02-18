@@ -4,33 +4,6 @@ import {
     Clock, Trophy, ClipboardList, Mail,
     Book, Users, Calendar, HelpCircle, MapPin, Award, Medal, Star
 } from 'lucide-react';
-
-function App() {
-    useEffect(() => {
-        // Create meta tag
-        const metaTag = document.createElement("meta");
-        metaTag.name = "viewport";
-        metaTag.content = "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no";
-
-        // Append to head
-        document.head.appendChild(metaTag);
-
-        // Cleanup on unmount
-        return () => {
-            document.head.removeChild(metaTag);
-        };
-    }, []);
-
-    return (
-        <div className="App">
-            <h1>Welcome to My React App</h1>
-            <p>Try zooming or right-clicking! 🚫</p>
-        </div>
-    );
-}
-
-export { App };
-// Constants
 const REGISTRATION_END_DATE = '2025-03-06T00:00:00';
 
 // Reusable components
@@ -105,66 +78,66 @@ const tabCategories = {
                 title: "Prizes",
                 content: (
                     <div className="max-w-4xl mx-auto space-y-8">
-                    {/* Header */}
-                    <div className="text-center space-y-2">
-                        <h2 className="text-4xl font-bold text-blue-600">PRIZE POOL</h2>
-                        <div className="inline-block bg-blue-50 rounded-full px-6 py-2">
-                            <h3 className="text-4xl font-extrabold text-blue-700">
-                                ₹5,000
-                            </h3>
-                        </div>
-                    </div>
-
-                    {/* Prize Cards Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {/* First Place */}
-                        <Card className="p-6 text-center space-y-4 transform hover:scale-105 transition-transform duration-200">
-                        <Trophy className="w-12 h-12 mx-auto text-[#FFD700]" />
-
-                            <div>
-                                <h4 className="font-bold text-2xl text-[#FFD700]">First Place</h4>
-                                <p className="text-3xl font-extrabold text-500">₹2,000</p>
-                            </div>
-                        </Card>
-
-                        {/* Second Place */}
-                        <Card className="p-6 text-center space-y-4 transform hover:scale-105 transition-transform duration-200">
-                            <Award className="w-12 h-12 mx-auto text-gray-400" />
-                            <div>
-                                <h4 className="font-bold text-2xl text-gray-400">Second Place</h4>
-                                <p className="text-3xl font-extrabold text-silver-500">₹1,500</p>
-                            </div>
-                        </Card>
-
-                        {/* Third Place */}
-                        <Card className="p-6 text-center space-y-4 transform hover:scale-105 transition-transform duration-200">
-                            <Medal className="w-12 h-12 mx-auto text-[#CD7F32]" />
-                            <div>
-                                <h4 className="font-bold text-2xl text-[#CD7F32]">Third Place</h4>
-                                <p className="text-3xl font-extrabold text-600">₹1,000</p>
-                            </div>
-                        </Card>
-                    </div>
-
-                    {/* Additional Rewards Card */}
-                    <Card className="p-6 bg-trasnparent ">
-                        <h4 className="font-bold text-2xl mb-4 text-blue-600">Additional Rewards</h4>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                               <div className="flex items-center space-x-3">
-                                <Trophy className="w-6 h-6 text-[#FFD700]" />
-                                <p className="text-700">MVP Trophy</p>
-                            </div>
-                            <div className="flex items-center space-x-3">
-                                <Star className="w-6 h-6 text-white-600" />
-                                <p className="text-700">Merit Certificates for winners</p>
-                            </div>
-                            <div className="flex items-center space-x-3">
-                                <Star className="w-6 h-6 text-white-600" />
-                                <p className="text-700">Participation Certificates</p>
+                        {/* Header */}
+                        <div className="text-center space-y-2">
+                            <h2 className="text-4xl font-bold text-blue-600">PRIZE POOL</h2>
+                            <div className="inline-block bg-blue-50 rounded-full px-6 py-2">
+                                <h3 className="text-4xl font-extrabold text-blue-700">
+                                    ₹5,000
+                                </h3>
                             </div>
                         </div>
-                    </Card>
-                </div>
+
+                        {/* Prize Cards Grid */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {/* First Place */}
+                            <Card className="p-6 text-center space-y-4 transform hover:scale-105 transition-transform duration-200">
+                                <Trophy className="w-12 h-12 mx-auto text-[#FFD700]" />
+
+                                <div>
+                                    <h4 className="font-bold text-2xl text-[#FFD700]">First Place</h4>
+                                    <p className="text-3xl font-extrabold text-500">₹2,000</p>
+                                </div>
+                            </Card>
+
+                            {/* Second Place */}
+                            <Card className="p-6 text-center space-y-4 transform hover:scale-105 transition-transform duration-200">
+                                <Award className="w-12 h-12 mx-auto text-gray-400" />
+                                <div>
+                                    <h4 className="font-bold text-2xl text-gray-400">Second Place</h4>
+                                    <p className="text-3xl font-extrabold text-silver-500">₹1,500</p>
+                                </div>
+                            </Card>
+
+                            {/* Third Place */}
+                            <Card className="p-6 text-center space-y-4 transform hover:scale-105 transition-transform duration-200">
+                                <Medal className="w-12 h-12 mx-auto text-[#CD7F32]" />
+                                <div>
+                                    <h4 className="font-bold text-2xl text-[#CD7F32]">Third Place</h4>
+                                    <p className="text-3xl font-extrabold text-600">₹1,000</p>
+                                </div>
+                            </Card>
+                        </div>
+
+                        {/* Additional Rewards Card */}
+                        <Card className="p-6 bg-trasnparent ">
+                            <h4 className="font-bold text-2xl mb-4 text-blue-600">Additional Rewards</h4>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <div className="flex items-center space-x-3">
+                                    <Trophy className="w-6 h-6 text-[#FFD700]" />
+                                    <p className="text-700">MVP Trophy</p>
+                                </div>
+                                <div className="flex items-center space-x-3">
+                                    <Star className="w-6 h-6 text-white-600" />
+                                    <p className="text-700">Merit Certificates for winners</p>
+                                </div>
+                                <div className="flex items-center space-x-3">
+                                    <Star className="w-6 h-6 text-white-600" />
+                                    <p className="text-700">Participation Certificates</p>
+                                </div>
+                            </div>
+                        </Card>
+                    </div>
                 )
             },
 
@@ -379,25 +352,25 @@ const tabCategories = {
                                                 <img
                                                     src="/images/Principal.png"
                                                     alt="Principal Image"
-                                                    width="150"
-                                                    height="150"
+                                                    width="100"
+                                                    height="100"
                                                     style={{ borderRadius: "0%", marginRight: "15px", marginTop: "10px" }}
                                                 />
                                                 <div>
-                                                    <h4 className="font-bold">Dr. S. SAI SATYANARAYANA REDDY</h4>
+                                                    <h4 className="font-bold text-sm">Dr.S.SAI SATYANARAYANA REDDY</h4>
                                                     <p className="font-light">Principal</p>
                                                 </div>
                                             </div>
                                             <div style={{ display: "flex", alignItems: "center" }}>
                                                 <img
-                                                    src="/images/HOD.JPG"
-                                                    alt="Principal Image"
-                                                    width="150"
-                                                    height="150"
+                                                    src="/images/HOD.jpg"
+                                                    alt="HOD Image"
+                                                    width="100"
+                                                    height="100"
                                                     style={{ borderRadius: "0%", marginRight: "15px", marginTop: "10px" }}
                                                 />
                                                 <div>
-                                                    <h4 className="font-bold">Prof. Rambabu Mudusu</h4>
+                                                    <h4 className="font-bold text-sm">Prof. Rambabu Mudusu</h4>
                                                     <p className="font-light">HoD Of CSE - AI&ML</p>
                                                 </div>
                                             </div>
@@ -478,6 +451,11 @@ const tabCategories = {
                                 alt="College Building"
                                 className="rounded-lg shadow-lg w-full object-cover"
                             />
+                             <img
+                                src="/images/COLLEGE_PIC4.jpg" // Replace with actual image path
+                                alt="College Building"
+                                className="rounded-lg shadow-lg w-full object-cover"
+                            />
                         </div>
 
                     </div>
@@ -534,6 +512,24 @@ const HackathonWebsite = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const tabsRef = useRef(null);
 
+    // Add useEffect to handle viewport meta tag
+    useEffect(() => {
+        // Create or update viewport meta tag
+        let viewportMeta = document.querySelector('meta[name="viewport"]');
+        if (!viewportMeta) {
+            viewportMeta = document.createElement('meta');
+            viewportMeta.name = 'viewport';
+            document.head.appendChild(viewportMeta);
+        }
+        viewportMeta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0';
+
+        // Cleanup function
+        return () => {
+            if (viewportMeta) {
+                viewportMeta.content = 'width=device-width, initial-scale=1.0';
+            }
+        };
+    }, []);
     const handleTabChange = (tab) => {
         setActiveTab(tab);
         tabsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -568,7 +564,7 @@ const HackathonWebsite = () => {
                             <img
                                 src="/images/CLG LOGO.jpg"
                                 alt="College Logo"
-                                className="h-16 sm:h-12 md:h-14 lg:h-16 w-40 xs:w-40"
+                                className="h-16 sm:h-12 md:h-14 lg:h-16 w-40 xs:w-40 xs:h-40"
                             />
                         </div>
 
@@ -703,6 +699,7 @@ const HackathonWebsite = () => {
 
             </footer>
         </div>
+        
     );
 };
 
