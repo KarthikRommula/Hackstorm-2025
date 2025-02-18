@@ -435,14 +435,19 @@ const tabCategories = {
                         </div>
 
                         {/* Right Section - College Image */}
-                        <div className="sm:w-1/3 md:w-1/3 lg:w-1/3 flex flex-col space-y-14" style={{ marginTop: "12px" }}>
+                        <div className="sm:w-1/3 md:w-1/3 lg:w-1/3 flex flex-col space-y-6" style={{ marginTop: "12px" }}>
                             <img
                                 src="/images/COLLEGE_PIC.jpeg" // Replace with actual image path
                                 alt="College Building"
                                 className="rounded-lg shadow-lg w-full object-cover"
                             />
+                              <img
+                                src="/images/COLLEGE_PIC5.jpg" // Replace with actual image path
+                                alt="College Building"
+                                className="rounded-lg shadow-lg w-full object-cover"
+                            />
                             <img
-                                src="/images/COLLEGE_PIC2.jpeg" // Replace with actual image path
+                                src="/images/COLLEGE_PIC4.jpg" // Replace with actual image path
                                 alt="College Building"
                                 className="rounded-lg shadow-lg w-full object-cover"
                             />
@@ -451,11 +456,7 @@ const tabCategories = {
                                 alt="College Building"
                                 className="rounded-lg shadow-lg w-full object-cover"
                             />
-                             <img
-                                src="/images/COLLEGE_PIC4.jpg" // Replace with actual image path
-                                alt="College Building"
-                                className="rounded-lg shadow-lg w-full object-cover"
-                            />
+                           
                         </div>
 
                     </div>
@@ -631,13 +632,13 @@ const HackathonWebsite = () => {
                         {/* CTA buttons */}
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <button
-                                onClick={() => handleTabChange('contact')}
+                             onClick={() => window.open("https://forms.gle/kicTLp2by7oMfuJk6", "_blank")}
                                 className="w-full sm:w-auto px-8 py-4 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 font-bold transition-all hover:opacity-90"
                             >
                                 Register Now
                             </button>
                             <button
-                                onClick={() => handleTabChange('Themes')}
+                                onClick={() => handleTabChange('prizes')}
                                 className="w-full sm:w-auto px-8 py-4 rounded-lg border border-white/20 transition-all hover:bg-gray-800/50"
                             >
                                 Learn More
