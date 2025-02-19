@@ -149,7 +149,7 @@ const tabCategories = {
                         <Card>
                             <h4 className="font-bold text-xl mb-2">Team Formation & Participation</h4>
                             <ul className="list-disc list-inside space-y-2">
-                                <li>Teams must consist of 2-4 members</li>
+                                <li>Teams must consist of 4 members</li>
                                 <li>Each team must register before the hackathon begins</li>
                                 <li>Teams must work only during the designated 24-hour period</li>
                                 <li>All code must be written during the hackathon</li>
@@ -159,7 +159,7 @@ const tabCategories = {
                         <Card>
                             <h4 className="font-bold text-xl mb-2">Project Requirements</h4>
                             <ul className="list-disc list-inside space-y-2">
-                                <li>Choose one problem statement from provided categories</li>
+                                <li>One problem statement will be provided from Themes on Orientation session i.e on DAY -1</li>
                                 <li>Solutions must be original and not previously published</li>
                                 <li>Working prototype/MVP must be demonstrated</li>
                                 <li>Source code must be on public GitHub repository</li>
@@ -250,19 +250,17 @@ const tabCategories = {
                 content: (
                     <div className="space-y-4">
                         <Card>
-                            <h4 className="font-bold text-xl mb-2">Technical Mentors</h4>
+                            <h4 className="font-bold text-xl mb-2">Technical Expertise</h4>
                             <ul className="list-disc list-inside space-y-2">
-                                <li>Senior Engineers from FAANG companies</li>
-                                <li>Cloud Architecture Experts</li>
-                                <li>UI/UX Design Specialists</li>
+                                <li className="font-bold text-l mb-2">P S V PRASAD.</li>
+                                <li>Data Scientist with expertise in Machine Learning, NLP, Generative AI,</li>
                             </ul>
                         </Card>
                         <Card>
-                            <h4 className="font-bold text-xl mb-2">Business Mentors</h4>
+                            <h4 className="font-bold text-xl mb-2">Business Expertise</h4>
                             <ul className="list-disc list-inside space-y-2">
-                                <li>Startup Founders</li>
-                                <li>Product Managers</li>
-                                <li>VC Partners</li>
+                                <li className="font-bold text-l mb-2">Medipudi Durgaprasad.</li>
+                                <li>CEO-Levitica Pvt Ltd.Hyderabad.</li>
                             </ul>
                         </Card>
                     </div>
@@ -277,11 +275,11 @@ const tabCategories = {
                         {[
                             {
                                 q: "Who can participate?",
-                                a: "Anyone 18 years or older with a passion for technology can participate. All skill levels are welcome!"
+                                a: "I, II,III Btech students with a passion for technology can participate. All skill levels are welcome!"
                             },
                             {
                                 q: "What should I bring?",
-                                a: <>Bring your laptop, charger, and any other devices you need.
+                                a: <>Bring your laptop, charger, and any other devices you need, Personal belongings.
                                 </>
                             },
                             {
@@ -345,9 +343,38 @@ const tabCategories = {
                                                 programme with advanced learning solutions imparting knowledge of advanced
                                                 innovations like machine learning, often called deep learning, and artificial
                                                 intelligence.
+                                                <br />
+                                                This specialization is designed to enable students to build intelligent machines, software, or applications with a cutting-edge combination of machine learning, analytics and visualization technologies. The main goal of artificial intelligence (AI) learning is to program computers to use example data or experience to solve a given problem.
+                                                <br />
+                                                This programme discusses AI methods based in different fields, including neural networks, signal processing, control, and data mining, in order to present a unified treatment of machine learning problems and solutions.
                                             </p>
 
-
+                                            <div style={{ display: "flex", alignItems: "center" }}>
+                                                <img
+                                                    src="/images/CHAIRMAN.jpg"
+                                                    alt="CHAIRMAN Image"
+                                                    width="100"
+                                                    height="100"
+                                                    style={{ borderRadius: "0%", marginRight: "15px", marginTop: "10px" }}
+                                                />
+                                                <div>
+                                                    <h4 className="font-bold text-sm">Ln. K. Krishna Reddy</h4>
+                                                    <p className="font-light">Chairman</p>
+                                                </div>
+                                            </div>
+                                            <div style={{ display: "flex", alignItems: "center" }}>
+                                                <img
+                                                    src="/images/DIRECTOR.jpg"
+                                                    alt="DIRECTOR Image"
+                                                    width="100"
+                                                    height="100"
+                                                    style={{ borderRadius: "0%", marginRight: "15px", marginTop: "10px" }}
+                                                />
+                                                <div>
+                                                    <h4 className="font-bold text-sm">Dr. Rohit Kandakatla</h4>
+                                                    <p className="font-light">Director</p>
+                                                </div>
+                                            </div>
                                             <div style={{ display: "flex", alignItems: "center" }}>
                                                 <img
                                                     src="/images/Principal.png"
@@ -357,7 +384,7 @@ const tabCategories = {
                                                     style={{ borderRadius: "0%", marginRight: "15px", marginTop: "10px" }}
                                                 />
                                                 <div>
-                                                    <h4 className="font-bold text-sm">Dr.S.SAI SATYANARAYANA REDDY</h4>
+                                                    <h4 className="font-bold text-sm">Dr. S. SAI SATYANARAYANA REDDY</h4>
                                                     <p className="font-light">Principal</p>
                                                 </div>
                                             </div>
@@ -383,13 +410,13 @@ const tabCategories = {
                                     a: (
                                         <div>
                                             <ul className="list-disc pl-5 space-y-1">
-                                                <li><strong>B.AARTHIK</strong> - PRESIDENT</li>
-                                                <li><strong>R.KARTHIK</strong> - VICE PRESIDENT</li>
-                                                <li><strong>G.KARTHIK</strong> - SECRETARY</li>
+                                                <li><strong>B. AARTHIK</strong> - PRESIDENT</li>
+                                                <li><strong>R. KARTHIK</strong> - VICE PRESIDENT</li>
+                                                <li><strong>G. KARTHIK</strong> - SECRETARY</li>
                                                 <li><strong>AKSHITHA NAMAJI</strong> - HEAD OF OPERATIONS</li>
                                                 <li><strong>ABHAY KUMAR</strong> - HEAD OF DOCUMENTATION</li>
                                                 <li><strong>SAI TARUN REDDY</strong> - HEAD OF PUBLICITY</li>
-                                                <li><strong>BHAVYA SREE</strong> - HEAD OF SOCIAL MEDIA</li>
+                                                <li><strong>D. BHAVYA SREE</strong> - HEAD OF SOCIAL MEDIA</li>
                                             </ul>
                                         </div>
                                     )
@@ -405,14 +432,26 @@ const tabCategories = {
                                             +91-6301308494
                                         </a>.
                                         <br />
+                                        <div className="mt-4">
+                                            <iframe
+                                                src="https://maps.google.com/maps?q=17.385044,78.486671&z=15&output=embed"
+                                                width="100%"
+                                                height="300"
+                                                style={{ border: 0, borderRadius: "10px" }}
+                                                allowFullScreen
+                                                loading="lazy"
+                                            ></iframe>
+                                        </div>
+
+                                        {/* External Google Maps Link */}
                                         <a
                                             href="https://maps.app.goo.gl/W6BMzjwvN4aVWu93A"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="inline-flex items-center gap-2 mt-2 text-blue-600 font-medium hover:text-blue-800"
                                         >
-                                            <MapPin className="w-5 h-5 text-white-600" />
-                                            View on Maps
+                                            <MapPin className="w-5 h-5 text-blue-600" />
+                                            Open in Google Maps
                                         </a>
                                     </>
 
@@ -435,29 +474,44 @@ const tabCategories = {
                         </div>
 
                         {/* Right Section - College Image */}
-                        <div className="sm:w-1/3 md:w-1/3 lg:w-1/3 flex flex-col space-y-6" style={{ marginTop: "12px" }}>
+                        <div className="sm:w-1/3 md:w-1/3 lg:w-1/3 flex flex-col space-y-6" style={{ marginTop: "30px" }}>
                             <img
-                                src="/images/COLLEGE_PIC.jpeg" // Replace with actual image path
-                                alt="College Building"
-                                className="rounded-lg shadow-lg w-full object-cover"
-                            />
-                              <img
-                                src="/images/COLLEGE_PIC5.jpg" // Replace with actual image path
+                                src="/images/COLLEGE_PIC.jpeg"
                                 alt="College Building"
                                 className="rounded-lg shadow-lg w-full object-cover"
                             />
                             <img
-                                src="/images/COLLEGE_PIC4.jpg" // Replace with actual image path
+                                src="/images/COLLEGE_PIC5.jpg"
                                 alt="College Building"
                                 className="rounded-lg shadow-lg w-full object-cover"
                             />
                             <img
-                                src="/images/COLLEGE_PIC3.jpeg" // Replace with actual image path
+                                src="/images/COLLEGE_PIC4.jpg"
                                 alt="College Building"
-                                className="rounded-lg shadow-lg w-full object-cover"
+                                className="rounded-lg shadow-lg w-full object-cover hidden sm:block"
                             />
-                           
+                            <img
+                                src="/images/COLLEGE_PIC3.jpeg"
+                                alt="College Building"
+                                className="rounded-lg shadow-lg w-full object-cover hidden sm:block"
+                            />
+                            <img
+                                src="/images/COLLEGE_PIC2.jpeg"
+                                alt="College Building"
+                                className="rounded-lg shadow-lg w-full object-cover hidden sm:block"
+                            />
+                            <img
+                                src="/images/COLLEGE_PIC6.jpg"
+                                alt="College Building"
+                                className="rounded-lg shadow-lg w-full object-cover hidden sm:block"
+                            />
+                            <img
+                                src="/images/COLLEGE_PIC7.jpg"
+                                alt="College Building"
+                                className="rounded-lg shadow-lg w-full object-cover hidden sm:block"
+                            />
                         </div>
+
 
                     </div>
                 )
@@ -632,7 +686,7 @@ const HackathonWebsite = () => {
                         {/* CTA buttons */}
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <button
-                             onClick={() => window.open("https://forms.gle/kicTLp2by7oMfuJk6", "_blank")}
+                                onClick={() => window.open("https://forms.gle/kicTLp2by7oMfuJk6", "_blank")}
                                 className="w-full sm:w-auto px-8 py-4 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 font-bold transition-all hover:opacity-90"
                             >
                                 Register Now
@@ -700,7 +754,7 @@ const HackathonWebsite = () => {
 
             </footer>
         </div>
-        
+
     );
 };
 
