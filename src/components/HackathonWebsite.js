@@ -699,6 +699,13 @@ const HackathonWebsite = () => {
                             >
                                 Learn More
                             </button>
+                            <button
+                                onClick={() => handleTabChange('contact')}
+                                className="w-full sm:w-auto px-8 py-4 rounded-lg bg-gradient-to-r from-orange-500 to-rose-400 font-bold transition-all hover:opacity-90"
+
+                            >
+                                About Us
+                            </button>
                         </div>
                     </div>
                 </section>
