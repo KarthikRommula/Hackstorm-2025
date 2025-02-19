@@ -328,7 +328,7 @@ const tabCategories = {
                                 {
                                     q: " About College",
                                     a: <>
-                                        HACK STROM 2025 is hosted by KG REDDY COLLEGE OF ENGINEERING & TECHNOLOGY.
+                                        HACK Storm 2025 is hosted by KG REDDY COLLEGE OF ENGINEERING & TECHNOLOGY.
                                         <br />Located at Chilkur, Moinabad, Ranga Reddy, Telangana.
                                         <br />
                                         Our institution is committed to fostering innovation and technical excellence.
