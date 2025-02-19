@@ -326,16 +326,16 @@ const tabCategories = {
                         <div className="md:w-2/3 space-y-4">
                             {[
                                 {
-                                    q: " About College",
+                                    q: " About the College",
                                     a: <>
-                                        HACK Storm 2025 is hosted by KG REDDY COLLEGE OF ENGINEERING & TECHNOLOGY.
+                                        HACK Storm 2025 is organized by AI CLUB of KG REDDY COLLEGE OF ENGINEERING & TECHNOLOGY.
                                         <br />Located at Chilkur, Moinabad, Ranga Reddy, Telangana.
                                         <br />
                                         Our institution is committed to fostering innovation and technical excellence.
                                     </>
                                 },
                                 {
-                                    q: "About Department",
+                                    q: "About the Department",
                                     a: (
                                         <>
                                             <p>
