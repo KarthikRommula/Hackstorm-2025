@@ -662,7 +662,7 @@ const HackathonWebsite = () => {
                         {/* AI Club Logo aligned to the right */}
                         <div className="flex-shrink-0">
                             <img
-                                src="/images/AI LOGO.jpg"
+                                src="/images/AI_LOGO-removebg-preview.png"
                                 alt="AI Logo"
                                 className="h-12 md:h-14 lg:h-16 w-40 xs:w-40 -mt-4 sm:-mt-0"
                             />
