@@ -2,9 +2,9 @@
 import React, { useRef, useState, useEffect } from 'react';
 import {
     Clock, Trophy, ClipboardList, Mail,
-    Book, Users, Calendar, HelpCircle, MapPin, Award, Medal, Star
+    Book, Users, Calendar, HelpCircle, MapPin, Award, Medal, Star, Instagram
 } from 'lucide-react';
-const REGISTRATION_END_DATE = '2025-03-06T00:00:00';
+const REGISTRATION_END_DATE = '2025-03-10T00:00:00';
 
 // Reusable components
 const Card = ({ children, className = "" }) => (
@@ -462,7 +462,10 @@ const tabCategories = {
                                     q: "Follow Us",
                                     a: (
                                         <div className="flex space-x-4">
-                                            <a href="https://www.instagram.com/aiclub_kgr/" target="_blank" rel="noopener noreferrer" className="text-pink-500">INSTAGRAM</a>
+                                            <a href="https://www.instagram.com/aiclub_kgr/" className="flex items-center text-pink-500 space-x-2">
+                                                <Instagram className="w-5 h-5" />
+                                                <span></span>
+                                            </a>
                                             <a href="https://kgr.ac.in/" target="_blank" rel="noopener noreferrer" className="text-blue-500">KGRCET</a>
                                         </div>
                                     )
@@ -613,7 +616,7 @@ const HackathonWebsite = () => {
             />
 
             {/* Navbar */}
-            <nav className="fixed w-full z-50 bg-gray-900/80 border-b border-white/10 shadow-lg backdrop-blur-sm">
+            <nav className="fixed w-full z-50 bg-white border-b border-gray-300 shadow-md h-16 md:h-20">
                 <div className="max-w-full mx-auto px-4">
                     <div className="flex items-center justify-between h-20">
                         {/* Left: College Logo */}
@@ -621,7 +624,7 @@ const HackathonWebsite = () => {
                             <img
                                 src="/images/CLG LOGO.jpg"
                                 alt="College Logo"
-                                className="h-16 sm:h-12 md:h-14 lg:h-16 w-40 xs:w-40 xs:h-40"
+                                className="h-16 sm:h-12 md:h-14 lg:h-16 w-40 xs:w-40 xs:h-40 -mt-4 sm:-mt-0"
                             />
                         </div>
 
@@ -632,7 +635,10 @@ const HackathonWebsite = () => {
                                     <button
                                         key={key}
                                         onClick={() => handleTabChange(key)}
-                                        className={`px-3 py-2 rounded-md text-sm font-medium ${activeTab === key ? 'bg-purple-500/20 text-purple-400' : 'text-gray-300 hover:bg-gray-800'}`}
+                                        className={`px-3 py-2 rounded-md text-sm font-medium ${activeTab === key
+                                            ? 'bg-purple-100 text-purple-700'
+                                            : 'text-gray-900 hover:bg-gray-200'
+                                            }`}
                                     >
                                         <span className="flex items-center space-x-2">
                                             {tab.icon}
@@ -645,8 +651,8 @@ const HackathonWebsite = () => {
 
                         {/* Mobile menu button */}
                         <button
-                            className="lg:hidden p-2"
-                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}  // Toggle menu
+                            className="lg:hidden p-2 text-gray-900 -mt-4 sm:-mt-0"
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         >
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -654,16 +660,17 @@ const HackathonWebsite = () => {
                         </button>
 
                         {/* AI Club Logo aligned to the right */}
-                        <div className="flex-shrink-0 mr-0">
+                        <div className="flex-shrink-0">
                             <img
                                 src="/images/AI LOGO.jpg"
                                 alt="AI Logo"
-                                className="h-16 sm:h-12 md:h-14 lg:h-16 w-40 xs:w-40 xs:h-40"
+                                className="h-12 md:h-14 lg:h-16 w-40 xs:w-40 -mt-4 sm:-mt-0"
                             />
                         </div>
                     </div>
                 </div>
             </nav>
+
 
 
 
