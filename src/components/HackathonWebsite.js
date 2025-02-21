@@ -200,14 +200,14 @@ const tabCategories = {
                 content: (
                     <div className="space-y-4">
                         <Card>
-                            <h4 className="font-bold text-xl mb-2">Day 1 - March 7th, 2025</h4>
+                            <h4 className="font-bold text-xl mb-2">Day 1 - March 10th, 2025</h4>
                             <ul className="list-disc list-inside space-y-2">
                                 <li>10:00 AM - Opening Ceremony</li>
                                 <li>2:00 PM - Hacking Begins</li>
                             </ul>
                         </Card>
                         <Card>
-                            <h4 className="font-bold text-xl mb-2">Day 2 - March 8th, 2025</h4>
+                            <h4 className="font-bold text-xl mb-2">Day 2 - March 11th, 2025</h4>
                             <ul className="list-disc list-inside space-y-2">
                                 <li>9:00 AM - Project Check-in</li>
                                 <li>10:00 AM - Final Submissions</li>
