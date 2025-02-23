@@ -4,7 +4,42 @@ import {
     Clock, Trophy, ClipboardList, Mail,
     Book, Users, Calendar, HelpCircle, MapPin, Award, Medal, Star, Instagram
 } from 'lucide-react';
-const REGISTRATION_END_DATE = '2025-03-10T00:00:00';
+const REGISTRATION_END_DATE = '2025-03-08T00:00:00';
+
+const isRegistrationClosed = () => {
+    const now = new Date().getTime();
+    const endDate = new Date(REGISTRATION_END_DATE).getTime();
+    return now > endDate;
+};
+
+// Registration button component
+const RegistrationButton = () => {
+    const [isDisabled, setIsDisabled] = useState(isRegistrationClosed());
+
+    useEffect(() => {
+        // Check registration status initially and set up interval
+        const checkRegistration = () => {
+            setIsDisabled(isRegistrationClosed());
+        };
+
+        // Update every minute
+        const interval = setInterval(checkRegistration, 60000);
+        return () => clearInterval(interval);
+    }, []);
+
+    return (
+        <button
+            onClick={() => !isDisabled && window.open("https://forms.gle/kicTLp2by7oMfuJk6", "_blank")}
+            className={`w-full sm:w-auto px-8 py-4 rounded-lg font-bold transition-all ${isDisabled
+                ? 'bg-gray-600 cursor-not-allowed opacity-50'
+                : 'bg-gradient-to-r from-purple-500 to-pink-500 hover:opacity-90'
+                }`}
+            disabled={isDisabled}
+        >
+            {isDisabled ? 'Registration Closed' : 'Register Now'}
+        </button>
+    );
+};
 
 // Reusable components
 const Card = ({ children, className = "" }) => (
@@ -698,12 +733,9 @@ const HackathonWebsite = () => {
 
                         {/* CTA buttons */}
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                            <button
-                                onClick={() => window.open("https://forms.gle/kicTLp2by7oMfuJk6", "_blank")}
-                                className="w-full sm:w-auto px-8 py-4 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 font-bold transition-all hover:opacity-90"
-                            >
-                                Register Now
-                            </button>
+                            <RegistrationButton />
+
+
                             <button
                                 onClick={() => handleTabChange('prizes')}
                                 className="w-full sm:w-auto px-8 py-4 rounded-lg border border-white/20 transition-all hover:bg-gray-800/50"
