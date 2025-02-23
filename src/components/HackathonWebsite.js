@@ -685,6 +685,10 @@ const HackathonWebsite = () => {
                             </span>
                         </h1>
                         <p className="text-xl md:text-2xl text-gray-300">24-Hour Innovation Challenge</p>
+                        <span className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400  block">
+                            March 10-11, 2025
+                        </span>
+
 
                         {/* Countdown timer */}
                         <div className="py-8">
