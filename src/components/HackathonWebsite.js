@@ -237,16 +237,23 @@ const tabCategories = {
                         <Card>
                             <h4 className="font-bold text-xl mb-2">Day 1 - March 10th, 2025</h4>
                             <ul className="list-disc list-inside space-y-2">
-                                <li>10:00 AM - Opening Ceremony</li>
-                                <li>2:00 PM - Hacking Begins</li>
+                                <li><strong>10:00 AM - 12:00 PM:</strong> Opening Ceremony</li>
+                                <li><strong>12:00 PM - 2:00 PM:</strong> Lunch Break</li>
+                                <li><strong>2:00 PM - 8:30 PM:</strong> Development Phase</li>
+                                <li><strong>8:30 PM - 9:30 PM:</strong> Dinner Break</li>
+                                <li><strong>9:30 PM - 12:00 AM:</strong> Ongoing Development - Session I</li>
                             </ul>
                         </Card>
                         <Card>
                             <h4 className="font-bold text-xl mb-2">Day 2 - March 11th, 2025</h4>
                             <ul className="list-disc list-inside space-y-2">
-                                <li>9:00 AM - Project Check-in</li>
-                                <li>10:00 AM - Final Submissions</li>
-                                <li>2:00 PM - Awards Ceremony</li>
+                                <li><strong>12:00 AM - 7:30 AM:</strong> Ongoing Development - Session II</li>
+                                <li><strong>7:30 AM - 8:30 AM:</strong> Breakfast</li>
+                                <li><strong>8:30 AM - 10:00 AM:</strong> Final Development Session</li>
+                                <li><strong>10:00 AM - 11:00 AM:</strong> Break</li>
+                                <li><strong>11:00 AM - 1:00 PM:</strong> Project Presentations</li>
+                                <li><strong>1:00 PM - 2:30 PM:</strong> Lunch Break</li>
+                                <li><strong>2:30 PM - 4:00 PM:</strong> Award Ceremony & Closing Remarks</li>
                             </ul>
                         </Card>
                     </div>
