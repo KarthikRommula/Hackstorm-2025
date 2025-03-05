@@ -286,7 +286,7 @@ const tabCategories = {
                                 <li><strong>8:30 AM - 10:00 AM:</strong> Final Development Session</li>
                                 <li><strong>10:00 AM - 11:00 AM:</strong> Break</li>
                                 <li><strong>11:00 AM - 1:00 PM:</strong> Project Presentations</li>
-                                <li><strong>1:00 PM - 2:30 PM:</strong> Lunch Break</li>
+                                <li><strong>1:00 PM - 2:00 PM:</strong> Lunch Break</li>
                                 <li><strong>2:30 PM - 4:00 PM:</strong> Award Ceremony & Closing Remarks</li>
                             </ul>
                         </Card>
