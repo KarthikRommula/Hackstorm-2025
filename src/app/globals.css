@@ -14,6 +14,13 @@
     --foreground: #ededed;
   }
 }
+.bg-blue-50{
+  color: black;
+}
+.text-3xl {
+  font-size: 1.2rem;
+  line-height: 2.25rem;
+}
 
 body {
   color: var(--foreground);

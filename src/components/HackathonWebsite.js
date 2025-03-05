@@ -2,9 +2,10 @@
 import React, { useRef, useState, useEffect } from 'react';
 import {
     Clock, Trophy, ClipboardList, Mail,
-    Book, Users, Calendar, HelpCircle, MapPin, Award, Medal, Star, Instagram
+    Book, Users, Calendar, HelpCircle, MapPin, Award, Medal, Instagram, Crown, Star, Globe, Building2, DollarSign
+
 } from 'lucide-react';
-const REGISTRATION_END_DATE = '2025-03-08T00:00:00';
+const REGISTRATION_END_DATE = '2025-03-05T00:00:00';
 
 const isRegistrationClosed = () => {
     const now = new Date().getTime();
@@ -118,7 +119,7 @@ const tabCategories = {
                             <h2 className="text-4xl font-bold text-blue-600">PRIZE POOL</h2>
                             <div className="inline-block bg-blue-50 rounded-full px-6 py-2">
                                 <h3 className="text-4xl font-extrabold text-blue-700">
-                                    ₹5,000
+                                    ₹10,000
                                 </h3>
                             </div>
                         </div>
@@ -131,7 +132,7 @@ const tabCategories = {
 
                                 <div>
                                     <h4 className="font-bold text-2xl text-[#FFD700]">First Place</h4>
-                                    <p className="text-3xl font-extrabold text-500">₹2,000</p>
+                                    <p className="text-3xl font-extrabold text-500">₹5,000</p>
                                 </div>
                             </Card>
 
@@ -140,7 +141,7 @@ const tabCategories = {
                                 <Award className="w-12 h-12 mx-auto text-gray-400" />
                                 <div>
                                     <h4 className="font-bold text-2xl text-gray-400">Second Place</h4>
-                                    <p className="text-3xl font-extrabold text-silver-500">₹1,500</p>
+                                    <p className="text-3xl font-extrabold text-silver-500">₹3,000</p>
                                 </div>
                             </Card>
 
@@ -149,7 +150,7 @@ const tabCategories = {
                                 <Medal className="w-12 h-12 mx-auto text-[#CD7F32]" />
                                 <div>
                                     <h4 className="font-bold text-2xl text-[#CD7F32]">Third Place</h4>
-                                    <p className="text-3xl font-extrabold text-600">₹1,000</p>
+                                    <p className="text-3xl font-extrabold text-600">₹2,000</p>
                                 </div>
                             </Card>
                         </div>
@@ -172,6 +173,39 @@ const tabCategories = {
                                 </div>
                             </div>
                         </Card>
+                    </div>
+                )
+            },
+            sponsors: {
+                icon: <DollarSign className="w-5 h-5" />,
+                title: "Sponsors",
+                content: (
+                    <div className="max-w-4xl mx-auto space-y-8">
+                        {/* Header */}
+                        <div className="text-center space-y-2">
+                            <h2 className="text-4xl font-bold text-blue-600">OUR SPONSORS</h2>
+                            <p className="text-lg text-gray-300">The companies and organizations that make HackStorm 2025 possible</p>
+                        </div>
+
+                        {/* Platinum Sponsors */}
+                        <div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <Card className="p-6 text-center space-y-4 transform hover:scale-105 transition-transform duration-200">
+                                    <div className="h-24 flex items-center justify-center">
+                                        <img
+                                            src="/images/sponsor ceo.jpg"
+                                            alt="FilmGrid Logo"
+                                            className="max-h-full"
+                                        />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-xl">FilmGrid</h4>
+                                        <p className="text-gray-400 text-justify">FilmGrid roots began when a filmmaker decided to combine his passion for cameras and love of technology, to enable access to idle gear for aspiring creatives, with the launch of the first FilmGrid community soon, FilmGrid plans to grow nationwide to network of artists around India coming together to share creative gear with each other.</p>
+                                    </div>
+                                </Card>
+                             
+                            </div>
+                        </div>
                     </div>
                 )
             },
@@ -356,6 +390,98 @@ const tabCategories = {
                                 <p>{item.a}</p>
                             </Card>
                         ))}
+                    </div>
+                )
+            },
+            score: {
+                icon:  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                {/* Star at the top */}
+                <path d="M12 2l-1.5 3-3.5 0.5 2.5 2.5-0.6 3.5 3.1-1.5 3.1 1.5-0.6-3.5 2.5-2.5-3.5-0.5z" />
+                
+                {/* Podium - 3 blocks */}
+                <path d="M5 15v5h4v-5h-4z" />         {/* Third place (left) */}
+                <path d="M10 12v8h4v-8h-4z" />        {/* First place (center) - taller */}
+                <path d="M15 15v5h4v-5h-4z" />        {/* Second place (right) */}
+                
+                {/* Base of podium */}
+                <path d="M3 20h18v1H3z" />
+            </svg>,
+                title: "Scoreboard",
+                content: (
+                    <div className="max-w-4xl mx-auto p-6 space-y-8">
+                        {/* Scoreboard Header */}
+                        <div className="text-center">
+                            <h2 className="text-4xl font-bold text-blue-600 mb-4">SCOREBOARD</h2>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                            {/* 🏆 Champion */}
+                            <Card className=" h-64 p-6 text-center space-y-3 transform hover:scale-105 transition-transform duration-500 bg-gradient-to-r from-yellow-500 to-orange-500 shadow-2xl border border-yellow-400 rounded-3xl backdrop-blur-lg">
+                                <Medal className="w-14 h-14 mx-auto text-white drop-shadow-2xl" />
+                                <h4 className="font-extrabold text-3xl text-white uppercase tracking-wide">Champion</h4>
+                                <p className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-base text-gray-200 italic font-medium">
+                                    NAME
+                                </p>
+                            </Card>
+
+                            {/* 🥈 Runner-Up */}
+                            <Card className=" h-64 p-6 text-center space-y-3 transform hover:scale-105 transition-transform duration-500 bg-gradient-to-r from-gray-400 to-gray-600 shadow-lg border border-gray-500 rounded-3xl backdrop-blur-lg">
+                                <Trophy className="w-14 h-14 mx-auto text-white drop-shadow-2xl" />
+                                <h4 className="font-extrabold text-3xl text-white uppercase tracking-wide">Runner-Up</h4>
+                                <p className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-base text-gray-200 italic font-medium">
+                                    NAME
+                                </p>
+                            </Card>
+
+                            {/* 🥉 Second Runner-Up (Bronze Background) */}
+                            <Card className="h-64 p-6 text-center space-y-3 transform hover:scale-105 transition-transform duration-500 bg-gradient-to-r from-gray-700 to-gray-900 shadow-lg border border-gray-500 rounded-3xl backdrop-blur-lg">
+                                <Award className="w-14 h-14 mx-auto text-white drop-shadow-2xl" />
+                                <h4 className="font-extrabold text-3xl text-white uppercase tracking-wide"> SECOND Runner-Up</h4>
+                                <p className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-base text-gray-200 italic font-medium">
+                                    NAME
+                                </p>
+                            </Card>
+
+                            {/* 👑 Most Valuable Player (MVP) */}
+                            <Card className="h-64 p-6 text-center space-y-3 transform hover:scale-105 transition-transform duration-500 bg-gradient-to-r from-purple-700 to-indigo-700 shadow-2xl border border-purple-500 rounded-3xl backdrop-blur-lg">
+                                <Crown className="w-14 h-14 mx-auto text-yellow-400 drop-shadow-2xl" />
+                                <h4 className="font-extrabold text-3xl text-white uppercase tracking-wide">MVP</h4>
+                                <p className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-base text-gray-200 italic font-medium">
+                                    NAME
+                                </p>
+                            </Card>
+                        </div>
+
+                        {/* Detailed Scoreboard */}
+                        <Card className="p-6 shadow-md">
+                            <div className="overflow-x-auto">
+                                <table className="w-full border-collapse">
+                                    <thead>
+                                        <tr className="bg-blue-50">
+                                            <th className="p-3 text-left border-b">Rank</th>
+                                            <th className="p-3 text-left border-b">Team Name</th>
+                                            <th className="p-3 text-left border-b">Score</th>
+                                            <th className="p-3 text-left border-b">Theme</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {[
+                                            { rank: 1, name: 'TEAM - 1 ', score: 0, category: 'AI AUTOMATION' },
+                                            { rank: 2, name: 'TEAM - 2', score: 0, category: 'SOCIAL MEDIA & COMMUNICATION' },
+                                            { rank: 3, name: 'TEAM - 3', score: 0, category: 'HEALTH TECH' },
+                                            { rank: 4, name: 'TEAM - 4', score: 0, category: 'FINTECH' },
+                                            { rank: 5, name: 'TEAM - 5', score: 0, category: 'COMING SOON' }
+                                        ].map((entry) => (
+                                            <tr key={entry.rank}>
+                                                <td className="p-3 border-b">{entry.rank}</td>
+                                                <td className="p-3 border-b">{entry.name}</td>
+                                                <td className="p-3 border-b">{entry.score}</td>
+                                                <td className="p-3 border-b">{entry.category}</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </Card>
                     </div>
                 )
             },
@@ -726,7 +852,7 @@ const HackathonWebsite = () => {
                                 HackStorm - 2025
                             </span>
                         </h1>
-                        <p className="text-xl md:text-2xl text-gray-300">24-Hour Innovation Challenge</p>
+                        <p className="text-xl md:text-2xl text-gray-300">30 - Hour Innovation Challenge</p>
                         <span className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400  block">
                             March 10-11, 2025
                         </span>
