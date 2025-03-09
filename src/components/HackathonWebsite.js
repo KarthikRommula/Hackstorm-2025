@@ -203,7 +203,21 @@ const tabCategories = {
                                         <p className="text-gray-400 text-justify">FilmGrid roots began when a filmmaker decided to combine his passion for cameras and love of technology, to enable access to idle gear for aspiring creatives, with the launch of the first FilmGrid community soon, FilmGrid plans to grow nationwide to network of artists around India coming together to share creative gear with each other.</p>
                                     </div>
                                 </Card>
-                             
+                                <Card className="p-6 text-center space-y-4 transform hover:scale-105 transition-transform duration-200">
+                                    <div className="h-24 flex items-center justify-center">
+                                        <img
+                                            src="/images/Levitica logo.jpg"
+                                            alt="Levitica Logo"
+                                            className="max-h-full"
+                                        />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-xl">Levitca</h4>
+                                        <p className="text-gray-400 text-justify">Levitica Technologies is a full-service Web development and software testing agency that puts its focus on achieving key business objectives, rather than just aesthetics or mere technical implementation. Conversions, transactions, engagement, usability, marketability, revenue, ROI, etc., are some very popular words at Levitica Technologies.
+                                    </p>
+                                    </div>
+                                </Card>
+
                             </div>
                         </div>
                     </div>
@@ -397,18 +411,18 @@ const tabCategories = {
                 )
             },
             score: {
-                icon:  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-                {/* Star at the top */}
-                <path d="M12 2l-1.5 3-3.5 0.5 2.5 2.5-0.6 3.5 3.1-1.5 3.1 1.5-0.6-3.5 2.5-2.5-3.5-0.5z" />
-                
-                {/* Podium - 3 blocks */}
-                <path d="M5 15v5h4v-5h-4z" />         {/* Third place (left) */}
-                <path d="M10 12v8h4v-8h-4z" />        {/* First place (center) - taller */}
-                <path d="M15 15v5h4v-5h-4z" />        {/* Second place (right) */}
-                
-                {/* Base of podium */}
-                <path d="M3 20h18v1H3z" />
-            </svg>,
+                icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                    {/* Star at the top */}
+                    <path d="M12 2l-1.5 3-3.5 0.5 2.5 2.5-0.6 3.5 3.1-1.5 3.1 1.5-0.6-3.5 2.5-2.5-3.5-0.5z" />
+
+                    {/* Podium - 3 blocks */}
+                    <path d="M5 15v5h4v-5h-4z" />         {/* Third place (left) */}
+                    <path d="M10 12v8h4v-8h-4z" />        {/* First place (center) - taller */}
+                    <path d="M15 15v5h4v-5h-4z" />        {/* Second place (right) */}
+
+                    {/* Base of podium */}
+                    <path d="M3 20h18v1H3z" />
+                </svg>,
                 title: "Scoreboard",
                 content: (
                     <div className="max-w-4xl mx-auto p-6 space-y-8">
@@ -466,25 +480,52 @@ const tabCategories = {
                                             <th className="p-3 text-left border-b">Theme</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        {[
-                                            { rank: 1, name: 'TEAM - 1 ', score: 0, category: 'AI AUTOMATION' },
-                                            { rank: 2, name: 'TEAM - 2', score: 0, category: 'SOCIAL MEDIA & COMMUNICATION' },
-                                            { rank: 3, name: 'TEAM - 3', score: 0, category: 'HEALTH TECH' },
-                                            { rank: 4, name: 'TEAM - 4', score: 0, category: 'FINTECH' },
-                                            { rank: 5, name: 'TEAM - 5', score: 0, category: 'COMING SOON' }
-                                        ].map((entry) => (
-                                            <tr key={entry.rank}>
-                                                <td className="p-3 border-b">{entry.rank}</td>
-                                                <td className="p-3 border-b">{entry.name}</td>
-                                                <td className="p-3 border-b">{entry.score}</td>
-                                                <td className="p-3 border-b">{entry.category}</td>
-                                            </tr>
-                                        ))}
+                                    <tbody>{
+                                        [
+                                            { "rank": 1, "name": "Detech-T", "score": 0, "category": "" },
+                                            { "rank": 2, "name": "InnoMind's", "score": 0, "category": "" },
+                                            { "rank": 3, "name": "CodeX", "score": 0, "category": "" },
+                                            { "rank": 4, "name": "Sleep Deprived", "score": 0, "category": "" },
+                                            { "rank": 5, "name": "Team Avengers", "score": 0, "category": "" },
+                                            { "rank": 6, "name": "Visionary Ventures", "score": 0, "category": "" },
+                                            { "rank": 7, "name": "Deep thinkers", "score": 0, "category": "" },
+                                            { "rank": 8, "name": "Code Master", "score": 0, "category": "" },
+                                            { "rank": 9, "name": "Tech knights", "score": 0, "category": "" },
+                                            { "rank": 10, "name": "Team Neem", "score": 0, "category": "" },
+                                            { "rank": 11, "name": "CODE SNIPPET", "score": 0, "category": "" },
+                                            { "rank": 12, "name": "Vyas", "score": 0, "category": "" },
+                                            { "rank": 13, "name": "code Hunters", "score": 0, "category": "" },
+                                            { "rank": 14, "name": "Innovartx", "score": 0, "category": "" },
+                                            { "rank": 15, "name": "Code crafters", "score": 0, "category": "" },
+                                            { "rank": 16, "name": "Code pioneers", "score": 0, "category": "" },
+                                            { "rank": 17, "name": "Hack38", "score": 0, "category": "" },
+                                            { "rank": 18, "name": "ERRORS", "score": 0, "category": "" },
+                                            { "rank": 19, "name": "Team phoenix", "score": 0, "category": "" },
+                                            { "rank": 20, "name": "Debug Dudes", "score": 0, "category": "" },
+                                            { "rank": 21, "name": "Code Crackers", "score": 0, "category": "" },
+                                            { "rank": 22, "name": "Pavan's Team", "score": 0, "category": "" },
+                                            { "rank": 23, "name": "Bug Slayers", "score": 0, "category": "" },
+                                            { "rank": 24, "name": "TEAM KANYARASI", "score": 0, "category": "" },
+                                            { "rank": 25, "name": "Harish's Team", "score": 0, "category": "" },
+                                            { "rank": 26, "name": "Tech T-Rex", "score": 0, "category": "" },
+                                            { "rank": 27, "name": "Team Kernel", "score": 0, "category": "" },
+                                            { "rank": 28, "name": "TEAM MARVEL", "score": 0, "category": "" },
+                                            { "rank": 29, "name": "TEAMLESS", "score": 0, "category": "" },
+                                            { "rank": 30, "name": "ANKITH", "score": 0, "category": "" }
+                                        ]
+                                            .map((entry) => (
+                                                <tr key={entry.rank}>
+                                                    <td className="p-3 border-b">{entry.rank}</td>
+                                                    <td className="p-3 border-b">{entry.name}</td>
+                                                    <td className="p-3 border-b">{entry.score}</td>
+                                                    <td className="p-3 border-b">{entry.category}</td>
+                                                </tr>
+                                            ))}
                                     </tbody>
                                 </table>
                             </div>
                         </Card>
+
                     </div>
                 )
             },
