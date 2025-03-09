@@ -271,11 +271,12 @@ const tabCategories = {
                         <Card>
                             <h4 className="font-bold text-xl mb-2">Day 1 - March 10th, 2025</h4>
                             <ul className="list-disc list-inside space-y-2">
-                                <li><strong>10:00 AM - 12:00 PM:</strong> Opening Ceremony</li>
-                                <li><strong>12:00 PM - 2:00 PM:</strong> Lunch Break</li>
-                                <li><strong>2:00 PM - 4:30 PM:</strong> Development Phase</li>
-                                <li><strong>4:30 PM - 5:00 PM:</strong>Break</li>
-                                <li><strong>5:00 PM - 8:30 PM:</strong>Ongoing Development - Session I</li>
+                                <li><strong>10:00 AM - 12:00 NOON:</strong> Opening Ceremony</li>
+                                <li><strong>12:00 NOON - 1:30 PM:</strong> Discussion Session</li>
+                                <li><strong>1:30 PM - 2:30 PM:</strong> Lunch Break</li>
+                                <li><strong>2:30 PM - 5:00 PM:</strong> Development Phase</li>
+                                <li><strong>5:00 PM - 5:30 PM:</strong>Break</li>
+                                <li><strong>5:30 PM - 8:30 PM:</strong>Ongoing Development - Session I</li>
                                 <li><strong>8:30 PM - 9:30 PM:</strong> Dinner Break</li>
                                 <li><strong>9:30 PM - 12:00 AM:</strong> Ongoing Development - Session II</li>
                             </ul>
